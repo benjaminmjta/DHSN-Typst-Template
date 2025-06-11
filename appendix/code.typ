@@ -1,0 +1,14 @@
+// Code mit codefigure-Funktion -> siehe setup.typ
+// Codeblöcke werden automatisch in tocfiles/loc.typ eingetragen, aber nur wenn mit der Funktion codefigure() erstellt
+#import "../_functions.typ": *
+#show: codly-init.with()
+
+= Quellcode
+
+#codefigure("hello world beispiel", [
+    ```rust
+    pub fn main() {
+        println!("Hello, world!");
+    }
+    ```
+])
