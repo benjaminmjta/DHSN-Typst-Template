@@ -52,7 +52,7 @@
 #align(center)[
   #block(width: 80%)[
     #grid(
-      columns: (1fr, 1fr),
+      columns: (1fr, auto),
       align(left)[
         Ausbildender Praxispartner: \
         \

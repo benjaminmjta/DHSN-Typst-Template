@@ -13,3 +13,5 @@
 #let CompanySupervisor = "Mr. Crack"
 #let UniversitySupervisor = "Prof. Dr. labil. Daniel Düsentrieb"
 #let Font = "Times New Roman"
+
+#let Kapitel = false

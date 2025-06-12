@@ -44,15 +44,12 @@
 
   // Kapitelüberschriften
   show heading.where(level: 1): it => {
-    let kapitelnr = counter(heading).display("1")
     block(
       below: 2em,
       width: 100%,
       breakable: false,
     )[
       #v(5em)
-      #text(15pt, weight: "bold")[Kapitel #kapitelnr]
-      #v(0pt)
       #text(18pt, weight: "bold")[#it.body]
     ]
   }
@@ -98,5 +95,27 @@
   }
 
   // Inhalt
+  body
+}
+
+// chapter-spezifische Formatierung
+#let chapter(
+  body
+) = {
+  // headings:
+  show heading.where(level: 1): it => {
+    let kapitelnr = counter(heading).display("1")
+    block(
+      below: 2em,
+      width: 100%,
+      breakable: false,
+    )[
+      #v(5em)
+      #text(15pt, weight: "bold")[Kapitel #kapitelnr]
+      #v(0pt)
+      #text(18pt, weight: "bold")[#it.body]
+    ]
+  }
+
   body
 }
