@@ -25,7 +25,7 @@
   *#Title*
 ])
 
-#align(center, text(14pt)[
+#align(center, text(12pt)[
   *#Subtitle*
 ])
 
