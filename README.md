@@ -1,6 +1,6 @@
-# Thesis & Belegarbeit Vorlage für Typst
+# Typst Vorlage für wissenschaftliche Arbeiten an der DHSN
 
-Dieses Projekt stellt eine Vorlage für Abschlussarbeiten und Belegarbeiten mit [Typst](https://typst.app/) an der dualen Hochschule Sachsen dar. Es ist insbesondere für Arbeiten im Bereich IT geeignet und basiert auf der Formatierung der LaTeX-Vorlage von Prof. Dr.-Ing. Tenshi Hara sowie den formalen Vorgaben des DHSN-Leitfadens für soziale Arbeit (speziell für IT gibts keine ¯\_(ツ)_/¯).
+Dieses Projekt stellt eine Vorlage für wissenschaftliche Arbeiten mit [Typst](https://typst.app/) an der dualen Hochschule Sachsen dar. Es ist insbesondere für Arbeiten im Bereich IT geeignet und basiert auf der Formatierung der LaTeX-Vorlage von Prof. Dr.-Ing. Tenshi Hara sowie den formalen Vorgaben des DHSN-Leitfadens für soziale Arbeit (speziell für IT gibts keine ¯\_(ツ)_/¯).
 
 ## 📄 Hauptdatei
 
