@@ -1,3 +1,5 @@
+#import "_setup.typ": *
+
 = Eidesstattliche Erklärung
 
 Ich erkläre an Eides statt, dass ich die vorliegende Arbeit selbstständig und nur
@@ -9,5 +11,13 @@ Intelligenz generiert wurden, wurden als solche in der Arbeit ausdrücklich kenn
 gemacht. Die Arbeit wurde bisher in gleicher oder ähnlicher Form weder
 veröffentlicht noch einer anderen Prüfungsbehörde vorgelegt.
 
-#v(10%)
-#align(left)[Ort, Abgabedatum]#align(right)[Unterschrift der Verfasserin / des Verfassers]
+#v(10em)
+#align(center)[
+  #block(width: 100%)[
+    #grid(
+      columns: (1fr, 1fr),
+      align(left)[Dresden, den #SubmissionDate],
+      overline(offset: -1em)[#align(right)[Unterschrift #Author]],
+    )
+  ]
+]

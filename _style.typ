@@ -24,6 +24,7 @@
 
   set page(
     paper: "a4",
+    number-align: right,
     margin: (
       left: 3.5cm, 
       right: 2.5cm,
