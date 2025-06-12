@@ -79,23 +79,27 @@
     ]
   }
 
-
   show list: it => {
     block(above: 1em)[#it]
   }
-  
 
-  // Inhaltsverzeichnisse
+  // Inhaltverzeichnisse
   show outline.entry: it => {
-    set block(above: 1em)
-    it
-  }
-
-  show outline.entry.where(
-  level: 1
-  ): it => {
-    set text(weight: "bold")
-    it
+    if it.element.body in ([Belegarbeit], [Anhang]){
+      block(
+        above: 3em,
+        below: 2em,
+        text(weight: "black", size: 14pt, it.element.body)
+      )
+    } else if it.element.body == [Inhaltsverzeichnis]{
+    } else if it.level == 1{
+      set block(above: 1.5em)
+      text(weight: "bold", it)
+    }
+      else {
+      set block(above: 1em)
+      it
+    }
   }
 
   // Inhalt

@@ -38,9 +38,10 @@ Alle eigenen Funktionen und Elemente sowie eingebundene Pakete werden in der _fu
 
 // Verzeichnisse, werden automatisch gefüllt
 // lof -> list of figures, loc -> list of code, toc -> table of contents
+#include "tocfiles/toc.typ"
+
 #include "tocfiles/lof.typ"
 #include "tocfiles/loc.typ"
-#include "tocfiles/toc.typ"
 
 #set page(numbering: "1")
 #counter(page).update(1)

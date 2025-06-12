@@ -1,4 +1,4 @@
-= Abbildungenverzeichnis
+= Abbildungsverzeichnis
 
 #outline(
   title: none,
