@@ -73,12 +73,15 @@
     let kapitelnr = counter(heading).display("1.1")
     block(
       breakable: false,
-      above: 1.2em,
-      below: 1em,
       width: 100%,
     )[
       #text(12pt, weight: "bold")[#kapitelnr #it.body]
     ]
+  }
+
+
+  show list: it => {
+    block(above: 1em)[#it]
   }
   
 
