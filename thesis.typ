@@ -40,7 +40,7 @@ Alle eigenen Funktionen und Elemente sowie eingebundene Pakete werden in der _fu
 // Verzeichnisse, werden automatisch gefüllt
 // lof -> list of figures, loc -> list of code, toc -> table of contents
 #include "tocfiles/toc.typ"
-
+#include "sure.typ"
 #include "tocfiles/lof.typ"
 #include "tocfiles/loc.typ"
 
@@ -72,7 +72,3 @@ Alle eigenen Funktionen und Elemente sowie eingebundene Pakete werden in der _fu
 #counter(heading).update(0)
 
 #include "appendix/code.typ"
-
-#set heading(numbering: none)
-#pagebreak()
-#include "sure.typ"
