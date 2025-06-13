@@ -50,7 +50,7 @@ Alle eigenen Funktionen und Elemente sowie eingebundene Pakete werden in der _fu
   #text(size: 20pt)[= #Parts.at(0)]
 ]
 #pagebreak()
-#set heading(numbering: "1")
+#set heading(numbering: "1.")
 #counter(heading).update(0)
 
 
@@ -68,7 +68,7 @@ Alle eigenen Funktionen und Elemente sowie eingebundene Pakete werden in der _fu
   #text(size: 20pt)[= #Parts.at(1)]
 ]
 #pagebreak()
-#set heading(numbering: "A")
+#set heading(numbering: "A.1.1")
 #counter(heading).update(0)
 
 #include "appendix/code.typ"

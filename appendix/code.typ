@@ -5,6 +5,8 @@
 
 = Quellcode
 
+== Rust Beispiel
+
 #codefigure("hello world beispiel", [
     ```rust
     pub fn main() {

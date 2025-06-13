@@ -58,7 +58,7 @@
 
   // Unterkapitelüberschriften
   show heading.where(level: 2): it => {
-    let kapitelnr = counter(heading).display("1.1")
+    let kapitelnr = counter(heading).display()
     block(
       breakable: false,
       above: 2em,
@@ -71,7 +71,7 @@
 
   // Unterunterkapitelüberschriften
   show heading.where(level: 3): it => {
-    let kapitelnr = counter(heading).display("1.1")
+    let kapitelnr = counter(heading).display()
     block(
       breakable: false,
       width: 100%,
