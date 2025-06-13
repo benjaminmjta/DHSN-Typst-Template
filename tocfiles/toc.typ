@@ -1,7 +1,7 @@
-= Inhaltsverzeichnis
+//= Inhaltsverzeichnis
 
 #outline(
-  title: none,
+  title: "Inhaltsverzeichnis",
 )
 
 #pagebreak(to: "odd")

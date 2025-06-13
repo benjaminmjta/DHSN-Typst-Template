@@ -14,4 +14,5 @@
 #let UniversitySupervisor = "Prof. Dr. labil. Daniel Düsentrieb"
 #let Font = "Times New Roman"
 
+#let Parts = ("Belegarbeit", "Anhang")
 #let Kapitel = false

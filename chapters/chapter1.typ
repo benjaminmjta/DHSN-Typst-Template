@@ -1,9 +1,6 @@
 #import "../_style.typ": *
 #show: chapter // chapter spezifische Formatierung
 
-#import "../_functions.typ": *
-#show: codly-init.with() // benötigt für Codly Code-Highlighting
-
 = Einleitung
 
 == Was ist Typst?

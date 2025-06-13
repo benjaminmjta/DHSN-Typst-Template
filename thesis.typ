@@ -11,8 +11,6 @@ Alle eigenen Funktionen und Elemente sowie eingebundene Pakete werden in der _fu
 #import "_style.typ" : *
 #import "_setup.typ" : *
 
-#include "title.typ"
-
 // Gibt das gesamte Dokument an die Style Datei weiter -> style.body ist alles unter dieser #show-Anweisung
 #show: style.with(
   Title,
@@ -27,8 +25,11 @@ Alle eigenen Funktionen und Elemente sowie eingebundene Pakete werden in der _fu
   CompanyAddress,
   CompanySupervisor,
   UniversitySupervisor,
+  Parts,
   Font,
 )
+
+#include "title.typ"
 
 // Alphabetische Seitenzahl ab Abstract
 #set page(numbering: "a")
@@ -46,7 +47,7 @@ Alle eigenen Funktionen und Elemente sowie eingebundene Pakete werden in der _fu
 #set page(numbering: "1")
 #counter(page).update(1)
 #align(center)[
-  #text(size: 20pt)[= Belegarbeit]
+  #text(size: 20pt)[= #Parts.at(0)]
 ]
 #pagebreak()
 #set heading(numbering: "1")
@@ -60,11 +61,11 @@ Alle eigenen Funktionen und Elemente sowie eingebundene Pakete werden in der _fu
 
 #set heading(numbering: none)
 
-#bibliography("bibliography.yml", title: "Quellenverzeichnis")
+#bibliography("bibliography.yml", style: "ieee", title: "Quellenverzeichnis")
 
 #pagebreak()
 #align(center)[
-  #text(size: 20pt)[= Anhang]
+  #text(size: 20pt)[= #Parts.at(1)]
 ]
 #pagebreak()
 #set heading(numbering: "A")

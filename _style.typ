@@ -11,6 +11,7 @@
   CompanyAddress,
   CompanySupervisor,
   UniversitySupervisor,
+  Parts,
   Font,
   body
 ) = {
@@ -85,13 +86,14 @@
 
   // Inhaltverzeichnisse
   show outline.entry: it => {
-    if it.element.body in ([Belegarbeit], [Anhang]){
+    // bissl hässlich so, aber direkt auf #Parts zugreifen funktioniert nicht. pro eintrag [] herum sein...
+    if it.element.body in ([#Parts.at(0)], [#Parts.at(1)]) {
       block(
         above: 3em,
         below: 2em,
         text(weight: "black", size: 14pt, it.element.body)
       )
-    } else if it.element.body == [Inhaltsverzeichnis]{
+    } else if it.element.body in ([Inhaltsverzeichnis], [Eidesstattliche Erklärung]){
     } else if it.level == 1{
       set block(above: 1.5em)
       text(weight: "bold", it)
