@@ -1,18 +1,6 @@
+#import "_setup.typ": *
+
 #let style(
-  Title,
-  Subtitle,
-  Author,
-  School,
-  FieldOfStudy,
-  Paper,
-  SubmissionDate,
-  MatrikelNr,
-  Company,
-  CompanyAddress,
-  CompanySupervisor,
-  UniversitySupervisor,
-  Parts,
-  Font,
   body
 ) = {
 
