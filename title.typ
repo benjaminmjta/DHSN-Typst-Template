@@ -21,11 +21,11 @@
 
 #v(10%)
 
-#align(center, text(18pt)[
+#align(center, text(hyphenate: false, 18pt)[
   *#Title*
 ])
 
-#align(center, text(14pt)[
+#align(center, text(hyphenate: false, 14pt)[
   *#Subtitle*
 ])
 
