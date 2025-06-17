@@ -12,22 +12,9 @@ Alle eigenen Funktionen und Elemente sowie eingebundene Pakete werden in der _fu
 #import "_setup.typ" : *
 
 // Gibt das gesamte Dokument an die Style Datei weiter -> style.body ist alles unter dieser #show-Anweisung
-#show: style.with(
-  Title,
-  Subtitle,
-  Author,
-  School,
-  FieldOfStudy,
-  Paper,
-  SubmissionDate,
-  MatrikelNr,
-  Company,
-  CompanyAddress,
-  CompanySupervisor,
-  UniversitySupervisor,
-  Parts,
-  Font,
-)
+#show: style
+
+// ================================ //
 
 #include "title.typ"
 
