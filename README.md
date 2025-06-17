@@ -32,6 +32,18 @@ typst compile thesis.typ
 - `chapters/*`: Beinhaltet alle Kapitel.
 - alles andere sollte logisch sein
 
+## ⚠️ Wichtiges
+
+Pro Kapitel muss am Anfang der Datei.typ folgendes stehen.
+
+```typst
+#import "../_style.typ": *
+#show: chapter
+```
+
+Damit überschreibt die kapitelspezifische Formatierung die globale.
+Pro Kapitel nur einen level 1 Titel benutzen (= Titel) -> dieser wird automatisch mit "Kapitel #KapitelNr" davor formatiert (siehe bereits angelegte Kapitel).
+
 ## 📚 Dokumentation & Pakete
 
 - [Typst-Dokumentation](https://typst.app/docs/)
