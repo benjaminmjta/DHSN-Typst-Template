@@ -6,11 +6,18 @@
 #import "@preview/codly-languages:0.1.8" : *
 
 // für codeblöcke diese funktion verwenden -> sonst code nicht in tocfiles/loc.typ
-#let codefigure(caption, codeblock) = figure(
+#let codefigure(caption: "Code", codeblock: "") = figure(
   supplement: "",
   caption: caption,
   kind: "code",
   [#codly(languages: codly-languages)
     #codeblock
   ]
+)
+
+// für Bilder
+#let imagefigure(caption: "Bild", image_path: "", height : 5cm) = figure(
+  supplement: "",
+  image(height: height, image_path),
+  caption: caption
 )

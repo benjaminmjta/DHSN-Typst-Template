@@ -13,12 +13,16 @@ Typst ist eine moderne Textverarbeitungssprache, die speziell für die Erstellun
 Beispiel um zu referenzieren: das ist code im anhang: @code_anhang
 und das ist Code im Text: @code_text
 
-#codefigure("Code Beispiel im Text", [
-    ```python
-    def hello_world():
-        print("Hello, world!")
+#codefigure(
+    caption: "Code beispiel im Anhang", 
+    codeblock: [
+    ```rust
+    pub fn main() {
+        println!("Hello, world!");
+    }
     ```
-]) <code_text>
+    ]
+) <code_text>
 
 == Vorteile von Typst
 
