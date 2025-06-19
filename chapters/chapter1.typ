@@ -1,3 +1,5 @@
+#import "../_functions.typ": *
+#show: codly-init.with()
 #import "../_style.typ": *
 #show: chapter // chapter spezifische Formatierung
 
@@ -7,6 +9,16 @@
 
 (chatgpt content)
 Typst ist eine moderne Textverarbeitungssprache, die speziell für die Erstellung von Dokumenten entwickelt wurde. Sie kombiniert die Flexibilität von Markdown mit der Leistungsfähigkeit von LaTeX und bietet eine intuitive Syntax, die es ermöglicht, komplexe Layouts und Formatierungen einfach zu erstellen. Typst eignet sich hervorragend für wissenschaftliche Arbeiten, Berichte und andere Dokumente, bei denen eine präzise Formatierung erforderlich ist.
+
+Beispiel um zu referenzieren: das ist code im anhang: @code_anhang
+und das ist Code im Text: @code_text
+
+#codefigure("Code Beispiel im Text", [
+    ```python
+    def hello_world():
+        print("Hello, world!")
+    ```
+]) <code_text>
 
 == Vorteile von Typst
 

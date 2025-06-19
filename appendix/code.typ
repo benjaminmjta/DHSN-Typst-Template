@@ -7,10 +7,10 @@
 
 == Rust Beispiel
 
-#codefigure("hello world beispiel", [
+#codefigure("Code beispiel im Anhang", [
     ```rust
     pub fn main() {
         println!("Hello, world!");
     }
     ```
-])
+]) <code_anhang>
