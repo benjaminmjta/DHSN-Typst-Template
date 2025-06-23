@@ -7,7 +7,7 @@
 
 // für codeblöcke diese funktion verwenden -> sonst code nicht in tocfiles/loc.typ
 #let codefigure(caption: "Code", codeblock: "") = figure(
-  supplement: "",
+  supplement: "Code",
   caption: caption,
   kind: "code",
   [#codly(languages: codly-languages)
@@ -17,7 +17,7 @@
 
 // für Bilder
 #let imagefigure(caption: "Bild", image_path: "", height : 5cm) = figure(
-  supplement: "",
+  supplement: "Figur",
   image(height: height, image_path),
   caption: caption
 )
