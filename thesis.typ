@@ -51,6 +51,10 @@ Alle eigenen Funktionen und Elemente sowie eingebundene Pakete werden in der _fu
 #bibliography("bibliography.yml", style: "ieee", title: "Quellenverzeichnis")
 
 #pagebreak()
+
+#include "tocfiles/loh.typ"
+
+#pagebreak()
 #align(center)[
   #text(size: 20pt)[= #Parts.at(1)]
 ]

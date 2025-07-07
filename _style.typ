@@ -81,7 +81,7 @@
         below: 2em,
         text(weight: "black", size: 14pt, it.element.body)
       )
-    } else if it.element.body in ([Inhaltsverzeichnis], [Eidesstattliche Erklärung]){
+    } else if it.element.body in ([Inhaltsverzeichnis], [Eidesstattliche Erklärung], [Hilfsmittel]){
     } else if it.level == 1{
       set block(above: 1.5em)
       text(weight: "bold", it)
