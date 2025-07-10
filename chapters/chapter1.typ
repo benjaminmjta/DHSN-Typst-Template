@@ -24,6 +24,12 @@ und das ist Code im Text: @code_text
     ]
 ) <code_text>
 
+#imagefigure(
+    caption: "beispielbild - dhsn logo",
+    src: "figures/Logo_DHSN.png",
+    height: 100pt
+)
+
 == Vorteile von Typst
 
 Typst bietet zahlreiche Vorteile gegenüber traditionellen Textverarbeitungssystemen:

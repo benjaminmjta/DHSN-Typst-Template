@@ -16,8 +16,8 @@
 )
 
 // für Bilder
-#let imagefigure(caption: "Bild", image_path: "", height : auto, width : auto) = figure(
+#let imagefigure(caption: "Bild", src: "", height : auto, width : auto) = figure(
   supplement: "Figur",
-  image(height: height, image_path, width: width),
+  image(height: height, src, width: width),
   caption: caption
 )
