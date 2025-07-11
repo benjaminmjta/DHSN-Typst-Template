@@ -21,3 +21,28 @@
   image(height: height, src, width: width),
   caption: caption
 )
+
+#let twoimagesfigure(caption1: "Bild 1", caption2: "Bild 2", src1: "", src2: "", height : 100pt, width1: 50%, width2: 50%, gutter: auto) = align(center)[
+  #block(width: 100%)[
+    #grid(
+      columns: (width1, width2),
+      gutter: gutter,
+      align(left)[
+        #imagefigure(
+          caption: caption1,
+          src: src1,
+          width: 100%,
+          height: height
+        )
+      ],
+      align(right)[
+        #imagefigure(
+            caption: caption2,
+            src: src2,
+            width: 100%,
+            height: height
+          )
+      ]
+    )
+  ]
+]
