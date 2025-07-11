@@ -43,11 +43,11 @@ Alle eigenen Funktionen und Elemente sowie eingebundene Pakete werden in der _fu
 
 // Hier alle Kapitel inkludieren
 #include "chapters/chapter1.typ"
-#include "chapters/chapter2.typ"
 
 
 #set heading(numbering: none)
 
+#pagebreak()
 #bibliography("bibliography.yml", style: "ieee", title: "Quellenverzeichnis")
 
 #pagebreak()

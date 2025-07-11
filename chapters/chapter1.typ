@@ -3,18 +3,40 @@
 #import "../_style.typ": *
 #show: chapter // chapter spezifische Formatierung
 
-= Einleitung
+= Tutorial
 
-== Was ist Typst?
-
-(chatgpt content)
-Typst ist eine moderne Textverarbeitungssprache, die speziell für die Erstellung von Dokumenten entwickelt wurde. Sie kombiniert die Flexibilität von Markdown mit der Leistungsfähigkeit von LaTeX und bietet eine intuitive Syntax, die es ermöglicht, komplexe Layouts und Formatierungen einfach zu erstellen. Typst eignet sich hervorragend für wissenschaftliche Arbeiten, Berichte und andere Dokumente, bei denen eine präzise Formatierung erforderlich ist.
+== Beispiel für Anwendung der in \_functions.typ definierten Funktionen
 
 Beispiel um zu referenzieren: das ist code im anhang: @code_anhang
 und das ist Code im Text: @code_text
 
+Das in typst ( \` \` \` )  ohne die Leerzeichen dazwischen.
+
 #codefigure(
     caption: "Code beispiel im Anhang", 
+    codeblock: [
+    ```typc
+    #import "../_functions.typ": *
+    #show: codly-init.with()
+
+    #codefigure(
+        caption: "Code beispiel im Text",
+        codeblock: [
+            ` ` `rust
+            pub fn main() {
+                println!("Hello, world!");
+            }
+            ` ` `
+        ]
+    )
+    ```
+    ]
+)
+
+Ergibt das:
+
+#codefigure(
+    caption: "Code beispiel im Text", 
     codeblock: [
     ```rust
     pub fn main() {
@@ -24,24 +46,79 @@ und das ist Code im Text: @code_text
     ]
 ) <code_text>
 
+Beispiel für ein Bild:
+
+#codefigure(
+    caption: "Beispielbild", 
+    codeblock: [
+    ```typc
+    #import "../_functions.typ": *
+
+    #imagefigure(
+        caption: "beispielbild - dhsn logo",
+        src: "figures/Logo_DHSN.png",
+        height: 50pt
+    )
+    ```
+    ]
+)
+
+ergibt das:
+
 #imagefigure(
     caption: "beispielbild - dhsn logo",
     src: "figures/Logo_DHSN.png",
-    height: 100pt
+    height: 50pt
 )
 
-== Vorteile von Typst
+Beispiel für zwei Bilder nebeneinander:
 
-Typst bietet zahlreiche Vorteile gegenüber traditionellen Textverarbeitungssystemen:
-- *Einfache Syntax*: Die Syntax von Typst ist klar und leicht verständlich, was die Einarbeitung erleichtert.
-- *Flexibilität*: Typst ermöglicht es, Dokumente schnell zu formatieren und anzupassen, ohne sich mit komplexen Einstellungen herumschlagen zu müssen.
-- *Automatische Formatierung*: Typst kümmert sich um die korrekte Formatierung von Absätzen, Überschriften und Listen, sodass der Fokus auf dem Inhalt liegt.
-- *Integration von Code*: Typst unterstützt die Einbettung von Code und die automatische Generierung von Codeblöcken, was es ideal für technische Dokumente macht.
+#codefigure(
+    caption: "Beispielbild", 
+    codeblock: [
+    ```typc
+    #import "../_functions.typ": *
 
-=== Installation
-@harry
-Um Typst zu verwenden, müssen Sie zunächst die Typst-Software installieren. Dies kann in der Regel über den Paketmanager Ihres Betriebssystems erfolgen. Für detaillierte Anweisungen besuchen Sie bitte die offizielle Typst-Website.
-=== Erste Schritte mit Typst
-Um mit Typst zu beginnen, erstellen Sie eine neue Datei mit der Endung `.typ`. In dieser Datei können Sie Ihren Text schreiben und die Typst-Syntax verwenden, um das Layout und die Formatierung zu steuern. Hier ist ein einfaches Beispiel für den Anfang einer Typst-Datei:
+    #twoimagesfigure(
+        caption1: "Bild 1",
+        caption2: "Bild 2",
+        src1: "figures/Logo_DHSN.png",
+        src2: "figures/Logo_DHSN.png",
+        height: 50pt,
+        width1: 30%,
+        width2: 30%
+    )
+    ```
+    ]
+)
+
+ergibt das:
+
+#twoimagesfigure(
+    caption1: "Bild 1",
+    caption2: "Bild 2",
+    src1: "figures/Logo_DHSN.png",
+    src2: "figures/Logo_DHSN.png",
+    height: 50pt,
+    width1: 30%,
+    width2: 30%
+)
 
 #pagebreak()
+
+== Styling
+
+Alle Stylings sind in der Datei \_style.typ definiert. Diese Datei wird in thesis.typ importiert und angewendet. Um die Kapitelspezifischen Stile anzuwenden, muss pro Kapitel.typ am Anfang stehen:
+#codefigure(
+    caption: "Kapitel spezifische Formatierung", 
+    codeblock: [
+    ```typc
+    #show: chapter
+    ```
+    ]
+) 
+
+== Weitere Funktionalitäten
+
+Alle weiteren Funktionalitäten von Typst sind hier zu finden: https://typst.app/docs/
+
