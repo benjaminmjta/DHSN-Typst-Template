@@ -11,6 +11,10 @@ Intelligenz generiert wurden, wurden als solche in der Arbeit ausdrücklich kenn
 gemacht. Die Arbeit wurde bisher in gleicher oder ähnlicher Form weder
 veröffentlicht noch einer anderen Prüfungsbehörde vorgelegt.
 
+#place(top + left, dx: 285pt, dy: 320pt)[
+  #image("figures/Unterschrift.png", height: 40pt)
+]
+
 #v(10em)
 #align(center)[
   #block(width: 100%)[
