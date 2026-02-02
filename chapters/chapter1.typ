@@ -122,3 +122,6 @@ Alle Stylings sind in der Datei \_style.typ definiert. Diese Datei wird in thesi
 
 Alle weiteren Funktionalitäten von Typst sind hier zu finden: https://typst.app/docs/
 
+== Beispiel Zitat
+
+Das ist aus Harry Potter @harry

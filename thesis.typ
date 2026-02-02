@@ -48,7 +48,7 @@ Alle eigenen Funktionen und Elemente sowie eingebundene Pakete werden in der _fu
 #set heading(numbering: none)
 
 #pagebreak()
-#bibliography("bibliography.yml", style: "ieee", title: "Quellenverzeichnis")
+#bibliography("bibliography.yml", style: "chicago-notes", title: "Quellenverzeichnis")
 
 #pagebreak()
 
