@@ -5,7 +5,9 @@
 #let Author = "Benjamin Majta"
 #let School = "Duale Hochschule Sachsen"
 #let FieldOfStudy = "Informationstechnik"
-#let Paper = "Belegarbeit zur Praxisphase des X. Semesters"
+#let Paper = "Abschlussarbeit zur Erlangung des akademischen Abschlusses"
+#let MyDegree = "Bachelor of Engineering"
+#let MyDegreeShort = "B.Eng."
 #let SubmissionDate = "21. März 2003"
 #let MatrikelNr = "3005555"
 #let Company = "Arasaka Corporation"
@@ -14,5 +16,10 @@
 #let UniversitySupervisor = "Prof. Dr. labil. Daniel Düsentrieb"
 #let Font = "Times New Roman"
 
-#let Parts = ("Belegarbeit", "Anhang")
+#let Parts = ("Abschlussarbeit", "Anhang")
 #let Kapitel = false
+
+#let FontSizeXL = 18pt
+#let FontSizeL = 14pt
+#let FontSizeM = 12pt
+#let FontSizeS = 8pt

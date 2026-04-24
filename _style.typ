@@ -13,18 +13,27 @@
 
   set page(
     paper: "a4",
-    number-align: right,
     margin: (
-      left: 3.5cm, 
-      right: 2.5cm,
+      inside: 3.5cm,
+      outside: 2.5cm,
       top: 2.5cm,
       bottom: 2.5cm,
     ),
+    footer: context {
+      let num-style = page.numbering
+      if num-style != none {
+        let page-num = counter(page).get().first()
+        let pos = if calc.even(page-num) { left } else { right }
+        align(pos)[
+          #counter(page).display(num-style)
+        ]
+      }
+    }
   )
 
   set text(
     font: Font,
-    size: 12pt,
+    size: FontSizeM,
   )
 
   set par(
@@ -40,7 +49,7 @@
       breakable: false,
     )[
       #v(5em)
-      #text(18pt, weight: "bold")[#it.body]
+      #text(FontSizeXL, weight: "bold")[#it.body]
     ]
   }
 
@@ -53,7 +62,7 @@
       below: 1em,
       width: 100%,
     )[
-      #text(15pt, weight: "bold")[#kapitelnr #it.body]
+      #text(FontSizeL, weight: "bold")[#kapitelnr #it.body]
     ]
   }
 
@@ -64,7 +73,7 @@
       breakable: false,
       width: 100%,
     )[
-      #text(12pt, weight: "bold")[#kapitelnr #it.body]
+      #text(FontSizeM, weight: "bold")[#kapitelnr #it.body]
     ]
   }
 
@@ -79,7 +88,7 @@
       block(
         above: 3em,
         below: 2em,
-        text(weight: "black", size: 14pt, it.element.body)
+        text(weight: "black", size: FontSizeL, it.element.body)
       )
     } else if it.element.body in ([Inhaltsverzeichnis], [Eidesstattliche Erklärung], [Hilfsmittel]){
     } else if it.level == 1{
@@ -96,22 +105,40 @@
   body
 }
 
-// chapter-spezifische Formatierung
-#let chapter(
-  body
-) = {
-  // headings:
+#let main(body) = {
+  set page(header: context {
+    let cp = here().page()
+    let h1-on-page = query(heading.where(level: 1)).filter(h => h.location().page() == cp)
+
+    if h1-on-page.len() == 0 {
+      let active-headings = query(selector(heading.where(level: 1)).before(here()))
+      if active-headings.len() > 0 {
+        let current-h1 = active-headings.last()
+        let num = if current-h1.numbering != none {
+          numbering(current-h1.numbering, ..counter(heading).at(current-h1.location()))
+        } else { "" }
+
+        let position = if calc.even(cp) { left } else { right }
+
+        block(width: 100%, stroke: (bottom: 0.5pt + black), inset: (bottom: 6pt))[
+          #align(position)[
+            #text(size: FontSizeS)[#current-h1.supplement #num - #current-h1.body]
+          ]
+        ]
+      }
+    }
+  })
+
   show heading.where(level: 1): it => {
-    let kapitelnr = counter(heading).display("1")
-    block(
-      below: 2em,
-      width: 100%,
-      breakable: false,
-    )[
+    let num = if it.numbering != none {
+      numbering(it.numbering, ..counter(heading).at(it.location()))
+    } else { "" }
+
+    block(below: 2em, width: 100%, breakable: false)[
       #v(5em)
-      #text(15pt, weight: "bold")[Kapitel #kapitelnr]
+      #text(FontSizeL, weight: "bold")[#it.supplement #num]
       #v(0pt)
-      #text(18pt, weight: "bold")[#it.body]
+      #text(FontSizeXL, weight: "bold")[#it.body]
     ]
   }
 

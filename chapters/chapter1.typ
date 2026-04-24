@@ -1,7 +1,7 @@
 #import "../_functions.typ": *
 #show: codly-init.with()
 #import "../_style.typ": *
-#show: chapter // chapter spezifische Formatierung
+#show: main // chapter spezifische Formatierung
 
 = Tutorial
 
@@ -10,10 +10,12 @@
 Beispiel um zu referenzieren: das ist code im anhang: @code_anhang
 und das ist Code im Text: @code_text
 
+Und hier verwende ich das Glossar: #gls("api")
+
 Das in typst ( \` \` \` )  ohne die Leerzeichen dazwischen.
 
 #codefigure(
-    caption: "Code beispiel im Anhang", 
+    caption: "Code beispiel im Anhang",
     codeblock: [
     ```typc
     #import "../_functions.typ": *
@@ -36,7 +38,7 @@ Das in typst ( \` \` \` )  ohne die Leerzeichen dazwischen.
 Ergibt das:
 
 #codefigure(
-    caption: "Code beispiel im Text", 
+    caption: "Code beispiel im Text",
     codeblock: [
     ```rust
     pub fn main() {
@@ -49,7 +51,7 @@ Ergibt das:
 Beispiel für ein Bild:
 
 #codefigure(
-    caption: "Beispielbild", 
+    caption: "Beispielbild",
     codeblock: [
     ```typc
     #import "../_functions.typ": *
@@ -74,7 +76,7 @@ ergibt das:
 Beispiel für zwei Bilder nebeneinander:
 
 #codefigure(
-    caption: "Beispielbild", 
+    caption: "Beispielbild",
     codeblock: [
     ```typc
     #import "../_functions.typ": *
@@ -110,13 +112,13 @@ ergibt das:
 
 Alle Stylings sind in der Datei \_style.typ definiert. Diese Datei wird in thesis.typ importiert und angewendet. Um die Kapitelspezifischen Stile anzuwenden, muss pro Kapitel.typ am Anfang stehen:
 #codefigure(
-    caption: "Kapitel spezifische Formatierung", 
+    caption: "Kapitel spezifische Formatierung",
     codeblock: [
     ```typc
     #show: chapter
     ```
     ]
-) 
+)
 
 == Weitere Funktionalitäten
 

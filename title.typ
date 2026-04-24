@@ -3,47 +3,53 @@
 #v(5%)
 
 #image(
-  "figures/Logo_DHSN.png", 
-  width: 100%, 
+  "figures/Logo_DHSN.png",
+  width: 100%,
   height: 3cm,
   fit: "contain",
 )
 
 #v(5%)
 
-#align(center, text(14pt)[
+#align(center, text(FontSizeL)[
   *#School*
 ])
 
-#align(center, text(12pt)[
+#align(center, text(FontSizeM)[
   \- Studienrichtung #FieldOfStudy -
 ])
 
-#v(10%)
+#v(7%)
 
-#align(center, text(hyphenate: false, 18pt)[
+#align(center, text(hyphenate: false, FontSizeXL)[
   *#Title*
 ])
 
-#align(center, text(hyphenate: false, 14pt)[
-  *#Subtitle*
+#v(7%)
+
+#align(center, text(FontSizeM)[
+  #Paper
 ])
 
-#v(10%)
-
-#align(center, text(12pt)[
-  *#Paper*
+#align(center, text(FontSizeM)[
+  #MyDegree
 ])
 
-#align(center, text(12pt)[
+#align(center, text(FontSizeS)[
+  (#MyDegreeShort)
+])
+
+#v(5%)
+
+#align(center, text(FontSizeM)[
   vorgelegt am #SubmissionDate von
 ])
 
-#align(center, text(12pt)[
+#align(center, text(FontSizeM)[
   *#Author*
 ])
 
-#align(center, text(12pt)[
+#align(center, text(FontSizeM)[
   Matrikelnummer: #MatrikelNr
 ])
 

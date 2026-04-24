@@ -28,8 +28,12 @@ Alle eigenen Funktionen und Elemente sowie eingebundene Pakete werden in der _fu
 // lof -> list of figures, loc -> list of code, toc -> table of contents
 #include "tocfiles/toc.typ"
 #include "sure.typ"
+#include "tocfiles/log.typ"
 #include "tocfiles/lof.typ"
 #include "tocfiles/loc.typ"
+
+#set text(lang: "de")
+#set heading(supplement: [Kapitel])
 
 #set page(numbering: "1")
 #counter(page).update(1)
@@ -48,7 +52,8 @@ Alle eigenen Funktionen und Elemente sowie eingebundene Pakete werden in der _fu
 #set heading(numbering: none)
 
 #pagebreak()
-#bibliography("bibliography.yml", style: "chicago-notes", title: "Quellenverzeichnis")
+
+#include "tocfiles/loq.typ"
 
 #pagebreak()
 
@@ -59,7 +64,11 @@ Alle eigenen Funktionen und Elemente sowie eingebundene Pakete werden in der _fu
   #text(size: 20pt)[= #Parts.at(1)]
 ]
 #pagebreak()
-#set heading(numbering: "A.1.1")
+
+#set heading(numbering: "A.1.1", supplement: "Anhang")
+
 #counter(heading).update(0)
 
 #include "appendix/code.typ"
+
+#include "appendix/llm.typ"
