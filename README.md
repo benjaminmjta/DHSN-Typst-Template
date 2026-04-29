@@ -1,6 +1,7 @@
 # Typst Vorlage für wissenschaftliche Arbeiten an der DHSN
 
-Dieses Projekt stellt eine Vorlage für wissenschaftliche Arbeiten mit [Typst](https://typst.app/) an der dualen Hochschule Sachsen dar. Es ist insbesondere für Arbeiten im Bereich IT geeignet und basiert auf der Formatierung der LaTeX-Vorlage von Prof. Dr.-Ing. Tenshi Hara sowie den formalen Vorgaben des DHSN-Leitfadens für soziale Arbeit (speziell für IT gibts keine ¯\_(ツ)_/¯).
+Dieses Projekt stellt eine Vorlage für wissenschaftliche Arbeiten mit [Typst](https://typst.app/) an der dualen Hochschule Sachsen dar. Es ist insbesondere für Arbeiten im Bereich IT geeignet und basiert auf der Formatierung der LaTeX-Vorlage von Prof. Dr.-Ing. Tenshi Hara sowie teilweise den formalen Vorgaben des DHSN-Leitfadens. Als Zitierstil wird standardmäßtig ieee verwendet. Das sollte man mit seinen Betreuern absprechen!
+Andernfalls kann man den Zitierstil auch ändern siehe: [Typst - Bibliography](https://typst.app/docs/reference/model/bibliography/).
 
 ## 📄 Hauptdatei
 
@@ -34,19 +35,21 @@ typst compile thesis.typ
 
 ## ⚠️ Wichtiges
 
-Pro Kapitel muss am Anfang der Datei.typ folgendes stehen.
+Pro Kapitel & Anhang muss am Anfang der Datei.typ folgendes stehen.
 
 ```typst
 #import "../_style.typ": *
-#show: chapter
+#show: main
 ```
 
-Damit überschreibt die kapitelspezifische Formatierung die globale.
+Damit überschreibt die kapitel-/anhangspezifische Formatierung die globale.
 Pro Kapitel nur einen level 1 Titel benutzen (= Titel) -> dieser wird automatisch mit "Kapitel #KapitelNr" davor formatiert (siehe bereits angelegte Kapitel).
 
 ## 📚 Dokumentation & Pakete
 
 - [Typst-Dokumentation](https://typst.app/docs/)
+- [Verwendung Bibliography](https://typst.app/docs/reference/model/bibliography/)
+- [Verwendung Glossar](https://typst.app/universe/package/glossarium/)
 - [Typst-Pakete](https://typst.app/docs/packages/)
 
 ## 📘 Quellen der Vorlage
