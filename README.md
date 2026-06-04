@@ -58,7 +58,7 @@ Diese Vorlage basiert auf:
 
 - LaTeX-Vorlage von Prof. Dr.-Ing. Tenshi Hara  
   👉 [GitHub-Repo](https://github.com/tchara/StADD-Thesis)
-- Leitfaden der DHSN Soziale Arbeit  
+- Leitfaden der DHSN Soziale Arbeit - Diese Arbeit ist nicht 100% mit dem Leitfaden konform. Laut Studiengangsleiter (Stand 2026) kann die BA von dem Leitfaden abweichen, solange beide Betreuer damit einverstanden sind.
   👉 [DHSN-Website](https://www.dhsn.de/fileadmin/mediamanager/001_duale_hochschule/016_studienangebot/breitenbrunn/soziale_arbeit/dokumente/DHSN_BB_Leitfaden_fuer_das_wissenschaftliche_Arbeiten_Studiengang_Soziale_Arbeit_ab_10_2024.pdf)
 
 > Für IT-Studiengänge gibt es keinen eigenen Leitfaden – diese Vorlage sollte ausreichen.
